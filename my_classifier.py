@@ -26,8 +26,7 @@ from zipfile import ZipFile
 
 
 
-def my_clasif(file_name)
-  # TODO: !!!Upload your image folder as a zip-file!!!
+def my_clasif(file_name):
   file_name = 'imagedata.zip' # <-- name of your zipfile
 
   with ZipFile(file_name, 'r') as zip:
@@ -37,7 +36,6 @@ def my_clasif(file_name)
 
 
 
-  #TODO: Enter your paths
 
   # Path to true labels (headless csv) Does not need to have the csv extension, just needs to be comma separated.
   #label_path = 'labels.txt' # <- !!!Path to ground truth file goes here!!!
