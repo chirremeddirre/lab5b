@@ -120,4 +120,4 @@ def my_clasif(file_name):
           predictions[idx,i] =  int(prediction)
 
 
-return predictions
+  return predictions
