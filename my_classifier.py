@@ -7,18 +7,10 @@ import re
 import pandas as pd
 import pickle
 from keras.utils.data_utils import get_file
-import zipfile
 
 
 
 def my_classif(file_name):
-  # TODO: !!!Upload your image folder as a zip-file!!!
-  #file_name = 'imagedata.zip' # <-- name of your zipfile
-
-
-
-
-  #TODO: Enter your paths
 
   # Path to true labels (headless csv) Does not need to have the csv extension, just needs to be comma separated.
   #label_path = 'labels.txt' # <- !!!Path to ground truth file goes here!!!
