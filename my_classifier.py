@@ -74,8 +74,6 @@ def my_classif(file_name):
       if(len(letter_regions) != 3):
           # If segmentation fails to find exactly three letters, just guess.
           predictions[idx,:] = np.random.randint(3, size=3)
-          print(idx)
-          print(len(letter_regions))
           continue
       # Letters appear in increasing order of their x-coordinate
       letter_regions = sorted(letter_regions, key=lambda x: x[0])
