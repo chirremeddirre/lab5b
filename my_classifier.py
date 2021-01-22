@@ -119,5 +119,4 @@ def my_clasif(file_name):
           prediction = lb.inverse_transform(prediction)[0]
           predictions[idx,i] =  int(prediction)
 
-
   return predictions
