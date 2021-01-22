@@ -1,3 +1,17 @@
+from keras.models import load_model
+from imutils import paths
+import cv2
+import numpy as np
+from matplotlib import pyplot as plt
+import os
+import re
+import pandas as pd
+import pickle
+from keras.utils.data_utils import get_file
+from zipfile import ZipFile
+
+
+
 def my_classif(file_name):
   # TODO: !!!Upload your image folder as a zip-file!!!
   #file_name = 'imagedata.zip' # <-- name of your zipfile
