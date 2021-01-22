@@ -8,7 +8,7 @@ import re
 import pandas as pd
 import pickle
 from keras.utils.data_utils import get_file
-from zipfile import ZipFile
+import zipfile
 
 
 
@@ -16,7 +16,7 @@ def my_classif(file_name):
   # TODO: !!!Upload your image folder as a zip-file!!!
   #file_name = 'imagedata.zip' # <-- name of your zipfile
 
-  with ZipFile(file_name, 'r') as zip:
+  with zipfile.ZipFile(file_name, 'r') as zip:
     zip.extractall()
     print('Done')
     print(file_name)
