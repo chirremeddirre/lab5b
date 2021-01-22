@@ -1,33 +1,6 @@
-#!/usr/bin/env python
-
-#!/usr/bin/env python
-from keras.models import load_model
-from imutils import paths
-import cv2
-import numpy as np
-from matplotlib import pyplot as plt
-import os
-import re
-import pandas as pd
-import pickle
-from keras.utils.data_utils import get_file
-from zipfile import ZipFile
-
-#cv2.__version__
-# !!NOTE!! Everything was written to comply with openCV 4.1.2 other versions might throw errors
-# Accuracy: 96%
-#
-# TODO: I added exlamation points to clearly mark the lines which you have to modify.
-# There is a comment on each of these lines telling you how you should modify it.
-
-# In case you wish to upload your image folder as a zipfile
-
-# Training set uploaded as zip-file
-
-
-
-def my_clasif(file_name):
-  file_name = 'imagedata.zip' # <-- name of your zipfile
+def my_classif(file_name):
+  # TODO: !!!Upload your image folder as a zip-file!!!
+  #file_name = 'imagedata.zip' # <-- name of your zipfile
 
   with ZipFile(file_name, 'r') as zip:
     zip.extractall()
@@ -36,6 +9,7 @@ def my_clasif(file_name):
 
 
 
+  #TODO: Enter your paths
 
   # Path to true labels (headless csv) Does not need to have the csv extension, just needs to be comma separated.
   #label_path = 'labels.txt' # <- !!!Path to ground truth file goes here!!!
@@ -102,7 +76,6 @@ def my_clasif(file_name):
           print(idx)
           print(len(letter_regions))
           continue
-      pred = []
       # Letters appear in increasing order of their x-coordinate
       letter_regions = sorted(letter_regions, key=lambda x: x[0])
       for i in range(len(letter_regions)):
@@ -118,5 +91,6 @@ def my_clasif(file_name):
           # Revert one-hot encoding
           prediction = lb.inverse_transform(prediction)[0]
           predictions[idx,i] =  int(prediction)
+
 
   return predictions
