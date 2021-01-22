@@ -2,7 +2,6 @@ from keras.models import load_model
 from imutils import paths
 import cv2
 import numpy as np
-from matplotlib import pyplot as plt
 import os
 import re
 import pandas as pd
