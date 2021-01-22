@@ -15,10 +15,6 @@ def my_classif(file_name):
   # TODO: !!!Upload your image folder as a zip-file!!!
   #file_name = 'imagedata.zip' # <-- name of your zipfile
 
-  with zipfile.ZipFile(file_name, 'r') as zip:
-    zip.extractall()
-    print('Done')
-    print(file_name)
 
 
 
@@ -28,7 +24,7 @@ def my_classif(file_name):
   #label_path = 'labels.txt' # <- !!!Path to ground truth file goes here!!!
 
   # Path to image folder
-  read_path = file_name.split('.')[0] # <- !!!Name of your folder after unzipping in the previous step!!!
+  read_path = file_name # <- !!!Name of your folder after unzipping in the previous step!!!
 
   # !!!You don't have to touch anything below this!!!
 
